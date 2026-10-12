@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Default Prediction | ML Project</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#home"><span class="logo-icon">LD</span><span>Loan<span class="accent">Wise</span><small>DEFAULT PREDICTION SYSTEM</small></span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#predict">Prediction</a>
+      <a href="#models">Models</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="header-actions"><a class="nav-button" href="#predict">Try Demo ↗</a><button class="logout-button" id="logoutBtn" type="button">Log out</button></div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> MACHINE LEARNING PROJECT</div>
+        <h1>Predict loan risk.<br><span>Make informed</span><br>decisions.</h1>
+        <p class="hero-text">A project exploring loan default prediction using Random Forest and Gradient-Boosted Trees, two powerful ensemble learning methods.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#predict">Explore Prediction <span>→</span></a><a class="text-btn" href="#about">Learn about the project</a></div>
+        <div class="hero-note"><span class="check">✓</span> Academic demonstration · Sample inputs only</div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of loan risk dashboard">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="floating-card card-top"><span class="mini-icon">↗</span><div><small>MODEL APPROACH</small><strong>Ensemble Learning</strong></div></div>
+        <div class="dashboard-card">
+          <div class="dash-head"><div><small>RISK ANALYTICS</small><strong>Applicant overview</strong></div><span class="live">DEMO</span></div>
+          <div class="score-row"><div><small>Model comparison</small><h3>2 algorithms</h3><p>Same evaluation dataset</p></div><div class="donut"><span>ML</span></div></div>
+          <div class="bar-label"><span>Random Forest</span><b>Model A</b></div><div class="progress"><span style="width:78%"></span></div>
+          <div class="bar-label"><span>Gradient Boosting</span><b>Model B</b></div><div class="progress green"><span style="width:86%"></span></div>
+          <div class="dash-footer"><span>●</span> Replace demo visuals with actual test results</div>
+        </div>
+        <div class="floating-card card-bottom"><div class="round-check">✓</div><div><strong>Data → Model → Result</strong><small>Project workflow</small></div></div>
+      </div>
+    </section>
+
+    <section class="quick-stats">
+      <div><span class="stat-symbol blue">01</span><div><strong>Random Forest</strong><small>Bagging-based ensemble</small></div></div>
+      <div><span class="stat-symbol green">02</span><div><strong>Gradient-Boosted Trees</strong><small>Sequential boosting method</small></div></div>
+      <div><span class="stat-symbol purple">◎</span><div><strong>Model Evaluation</strong><small>Compare performance metrics</small></div></div>
+    </section>
+
+    <section class="section prediction-section" id="predict">
+      <div class="section-heading"><div><div class="eyebrow">INTERACTIVE DEMO</div><h2>Loan application <span>assessment</span></h2><p>Enter sample values to explore the frontend workflow.</p></div><span class="demo-badge">Frontend demo</span></div>
+      <div class="prediction-layout">
+        <form class="form-card" id="loanForm">
+          <h3>Applicant information</h3><p class="form-intro">Fields below are demonstration inputs. Adjust them to match your dataset features.</p>
+          <div class="input-grid">
+            <label>Annual income (₹)<input type="number" name="income" min="1" placeholder="600000" required></label>
+            <label>Loan amount (₹)<input type="number" name="loan" min="1" placeholder="250000" required></label>
+            <label>Credit score<input type="number" name="credit" min="300" max="900" placeholder="720" required></label>
+            <label>Debt-to-income (%)<input type="number" name="dti" min="0" max="100" step="0.1" placeholder="32" required></label>
+            <label>Credit history<select name="history" required><option value="">Choose one</option><option value="good">Good / established</option><option value="limited">Limited / poor</option></select></label>
+            <label>Employment length<select name="employment" required><option value="">Choose one</option><option value="0">Less than 1 year</option><option value="2">1–3 years</option><option value="5">4–6 years</option><option value="8">7+ years</option></select></label>
+          </div>
+          <div class="form-actions"><button class="primary-btn" type="submit">Run demo prediction <span>→</span></button><button class="reset-btn" type="reset">Clear form</button></div>
+          <p class="disclaimer">Demo only: this frontend does not run a trained ML model. Do not use its sample result for real lending decisions.</p>
+        </form>
+        <aside class="result-card">
+          <div class="result-top"><span class="result-icon">✦</span><span class="demo-badge">RESULT PANEL</span></div>
+          <h3 id="resultTitle">Your result will appear here</h3>
+          <p id="resultText">Complete the form and run the demo to see how a result card can look.</p>
+          <div class="risk-meter"><div class="meter-label"><span>Illustrative risk indicator</span><strong id="riskText">—</strong></div><div class="meter-track"><span id="riskBar"></span></div></div>
+          <div class="result-tip"><strong>Remember</strong><p>A genuine prediction must come from your trained Random Forest or Gradient-Boosted Trees model.</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section models-section" id="models">
+      <div class="section-heading"><div><div class="eyebrow">OUR APPROACH</div><h2>Two models. <span>One comparison.</span></h2><p>Train and evaluate both algorithms using the same dataset split.</p></div></div>
+      <div class="model-grid">
+        <article class="model-card"><div class="model-icon blue-bg">RF</div><span class="model-number">MODEL 01</span><h3>Random Forest</h3><p>Combines predictions from multiple decision trees to help capture complex patterns and reduce overfitting.</p><ul><li>Builds many decision trees</li><li>Aggregates tree predictions</li><li>Can estimate feature importance</li></ul><div class="model-bottom"><span>Ensemble type</span><strong>Bagging</strong></div></article>
+        <article class="model-card featured"><div class="model-icon green-bg">GB</div><span class="model-number">MODEL 02 · COMPARISON</span><h3>Gradient-Boosted Trees</h3><p>Builds trees sequentially, with later trees improving on errors made by earlier trees.</p><ul><li>Sequential model training</li><li>Optimizes a loss function</li><li>Can capture complex relationships</li></ul><div class="model-bottom"><span>Ensemble type</span><strong>Boosting</strong></div></article>
+      </div>
+      <div class="metrics-note"><span>ⓘ</span><p><strong>Evaluation tip:</strong> Compare precision, recall, F1-score, ROC-AUC and the confusion matrix. Accuracy alone may be misleading when default cases are uncommon.</p></div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="about-copy"><div class="eyebrow">PROJECT OVERVIEW</div><h2>Making loan risk analysis <span>more data-driven.</span></h2><p>The project investigates how machine-learning models can classify loan applications into potential default and non-default categories. It compares two tree-based ensemble approaches on a common dataset and evaluates their results using suitable classification metrics.</p>
+        <div class="objective-list"><div><span>✓</span><p><strong>Objective</strong><small>Predict loan default risk from available applicant features.</small></p></div><div><span>✓</span><p><strong>Research gap</strong><small>Traditional assessments may miss complex patterns, while imbalanced data can make defaults harder to detect.</small></p></div><div><span>✓</span><p><strong>Method</strong><small>Preprocess data, split into train/test sets, train both models and compare results.</small></p></div></div>
+      </div>
+      <div class="team-panel"><div class="team-label">PROJECT TEAM</div><h3>Loan Default Prediction</h3><div class="member"><div class="member-avatar">R</div><div><strong>Kommalapati Rishitha</strong><small>2520030202</small></div></div><div class="member"><div class="member-avatar green-avatar">T</div><div><strong>Tanvi Reddy</strong><small>2520030214</small></div></div><div class="guide"><small>PROJECT GUIDE</small><strong>Mr. Shaik Asif</strong></div></div>
+    </section>
+  </main>
+  <footer><a class="logo footer-logo" href="#home"><span class="logo-icon">LD</span><span>Loan<span class="accent">Wise</span><small>LOAN DEFAULT PREDICTION</small></span></a><p>Academic project interface · Random Forest + Gradient-Boosted Trees</p><a href="#home">Back to top ↑</a></footer>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | LoanWise</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body">
+  <header class="auth-header">
+    <a class="logo" href="login.html"><span class="logo-icon">LD</span><span>Loan<span class="accent">Wise</span><small>LOAN DEFAULT PREDICTION</small></span></a>
+    <a class="auth-back" href="login.html">Already registered? Sign in</a>
+  </header>
+  <main class="auth-wrap signup-wrap">
+    <section class="auth-visual">
+      <div class="auth-orbit"></div>
+      <div class="auth-visual-content">
+        <span class="auth-kicker">GET STARTED</span>
+        <h1>Create your<br><span>project account.</span></h1>
+        <p>Register for this academic frontend demo to access the LoanWise dashboard.</p>
+        <div class="auth-feature"><span>✓</span><div><strong>Explore the project</strong><small>Understand the loan prediction workflow</small></div></div>
+        <div class="auth-feature"><span>✓</span><div><strong>Compare approaches</strong><small>Learn how tree-based models are evaluated</small></div></div>
+      </div>
+      <div class="auth-deco">LOANWISE <span>•</span> RISK INTELLIGENCE</div>
+    </section>
+    <section class="auth-form-side">
+      <form class="auth-card" id="signupForm">
+        <div class="auth-card-icon">＋</div>
+        <p class="eyebrow">JOIN THE WORKSPACE</p>
+        <h2>Create account</h2>
+        <p class="auth-subtitle">Fill in the details below to register for the demo.</p>
+        <div id="authMessage" class="auth-message" role="status" aria-live="polite"></div>
+        <label>Full name<input type="text" name="name" placeholder="Your name" autocomplete="name" maxlength="80" required></label>
+        <label>Email address<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label>
+        <label>Password<input type="password" name="password" placeholder="At least 6 characters" autocomplete="new-password" minlength="6" required></label>
+        <label>Confirm password<input type="password" name="confirmPassword" placeholder="Re-enter your password" autocomplete="new-password" minlength="6" required></label>
+        <button class="auth-submit" type="submit">Create account <span>→</span></button>
+        <p class="auth-switch">Already have an account? <a href="login.html">Sign in</a></p>
+        <p class="auth-disclaimer">Demo accounts are stored in this browser only. Do not use a real or reused password.</p>
+      </form>
+    </section>
+  </main>
+  <script src="js/auth.js"></script>
+</body>
+</html>

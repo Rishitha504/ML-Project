@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | LoanWise</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body">
+  <header class="auth-header">
+    <a class="logo" href="login.html"><span class="logo-icon">LD</span><span>Loan<span class="accent">Wise</span><small>LOAN DEFAULT PREDICTION</small></span></a>
+    <a class="auth-back" href="signup.html">Create account ↗</a>
+  </header>
+  <main class="auth-wrap">
+    <section class="auth-visual">
+      <div class="auth-orbit"></div>
+      <div class="auth-visual-content">
+        <span class="auth-kicker">MACHINE LEARNING PROJECT</span>
+        <h1>Welcome back to<br><span>smarter analysis.</span></h1>
+        <p>Sign in to explore the Loan Default Prediction project dashboard and compare the two ensemble learning approaches.</p>
+        <div class="auth-feature"><span>✓</span><div><strong>Two algorithms</strong><small>Random Forest and Gradient-Boosted Trees</small></div></div>
+        <div class="auth-feature"><span>✓</span><div><strong>One project workspace</strong><small>Prediction demo, model details and objectives</small></div></div>
+      </div>
+      <div class="auth-deco">LOANWISE <span>•</span> RISK INTELLIGENCE</div>
+    </section>
+    <section class="auth-form-side">
+      <form class="auth-card" id="loginForm">
+        <div class="auth-card-icon">↗</div>
+        <p class="eyebrow">YOUR PROJECT WORKSPACE</p>
+        <h2>Sign in</h2>
+        <p class="auth-subtitle">Enter the email and password you used to sign up.</p>
+        <div id="authMessage" class="auth-message" role="status" aria-live="polite"></div>
+        <label>Email address<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label>
+        <label>Password<input type="password" name="password" placeholder="Enter your password" autocomplete="current-password" minlength="6" required></label>
+        <button class="auth-submit" type="submit">Sign in to dashboard <span>→</span></button>
+        <p class="auth-switch">Don't have an account? <a href="signup.html">Create one</a></p>
+        <p class="auth-disclaimer">Academic demo only. This frontend-only login is not suitable for real accounts or sensitive information.</p>
+      </form>
+    </section>
+  </main>
+  <script src="js/auth.js"></script>
+</body>
+</html>
